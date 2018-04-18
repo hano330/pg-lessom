@@ -23,6 +23,7 @@
                         <td><%= data.term %></td>
                         <td><%= data.price %></td>
                         <td><%= link_to 'edit', edit_curriculum_path(data) %></td>
+                        <td><%= link_to 'delete', curriculum_path(data) , method:'delete' %></td>
                       </tr>
                     </div>
                   <% end %>

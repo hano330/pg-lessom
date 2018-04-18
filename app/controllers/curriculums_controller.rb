@@ -20,6 +20,11 @@ class CurriculumsController < ApplicationController
     curriculum = Curriculum.find(params[:id])
     curriculum.update(curriculum_params)
   end
+  def destroy
+    #code
+    curriculum = Curriculum.find(params[:id])
+    curriculum.destroy
+  end
 
   private
   def curriculum_params
