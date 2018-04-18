@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-6 col-md-4 col-md-offset-4">
+      <div class="thumbnail">
+        <div class="caption regist">
+            <%= simple_form_for curriculum ,:url => {:action => :create}, :html => { :class => 'form-horizontal' } do |f| %>
+            <div class="form">
+                <p><%= f.input :c_name %></p>
+                <p><%= f.input :term %></p>
+                <p><%= f.input :price %></p>
+                <p><%= f.button :submit, "submit", :class=>"btn btn-info btn-sm" %></p>
+            </div>
+            <% end %>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
