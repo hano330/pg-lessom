@@ -7,6 +7,9 @@ class CurriculumsController < ApplicationController
     #code
     @curriculum = Curriculum.new
   end
+  def show
+    #code
+  end
   def create
     #code
     Curriculum.create(curriculum_params)
