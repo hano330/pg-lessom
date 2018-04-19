@@ -90,30 +90,33 @@
         <div class="col-sm-6 col-md-4">
           <div class="thumbnail">
             <div class="caption">
-              <h3>Curriculum List</h3>
+              <h3>Curriculum</h3>
               <p>Ruby/Ruby on Rails</p>
               <p>Java/Spring</p>
               <p>PHP/Laravel</p>
               <p>React Native</p>
-              <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+              <hr>
+              <p><%= link_to "List", curriculums_path, :class=>"btn btn-info" %>&nbsp;<%= link_to "Registraiton", new_curriculum_path , :class=>"btn btn-info" %></p>
+              <p></p>
             </div>
           </div>
         </div>
         <div class="col-sm-6 col-md-4">
           <div class="thumbnail">
             <div class="caption">
-              <h3>User List</h3>
+              <h3>User</h3>
               <p>User A</p>
               <p>User B</p>
               <p>User C</p>
-              <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+              <hr>
+              <p><%= link_to "List", '#', :class=>"btn btn-info " %></p>
             </div>
           </div>
         </div>
         <div class="col-sm-6 col-md-4">
           <div class="thumbnail">
             <div class="caption">
-              <h3>Skills List</h3>
+              <h3>Skills</h3>
               <p>HTML</p>
               <p>Sass</p>
               <p>Ruby</p>
@@ -121,12 +124,15 @@
               <p>PHP</p>
               <p>JavaScript</p>
               <p>MySQL</p>
-              <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+              <hr>
+              <p><%= link_to "List", '#', :class=>"btn btn-info" %></p>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+
 
     <%= yield %>
   </body>
