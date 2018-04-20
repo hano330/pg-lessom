@@ -20,9 +20,13 @@ class UsersController < ApplicationController
   end
   def update
     #code
+    user = User.find(params[:id])
+    user.update(user_params)
   end
   def destroy
     #code
+    user = User.find(params[:id])
+    user.destroy
   end
 
   private
