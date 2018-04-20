@@ -1,4 +1,3 @@
-
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-6 col-md-4 col-md-offset-4">
@@ -11,6 +10,8 @@
                       <th>Curriculum Name</th>
                       <th>Term</th>
                       <th>Price</th>
+                      <th></th>
+                      <th></th>
                   </tr>
               </thead>
               <tbody>
@@ -22,7 +23,7 @@
                         <td><%= data.term %></td>
                         <td><%= data.price %></td>
                         <td><%= link_to 'edit', edit_curriculum_path(data) %></td>
-                        <td><%= link_to 'delete', curriculum_path(data) , method:'delete' %></td>
+                        <td><%= link_to 'delete', curriculum_path(data), method:'delete' %></td>
                       </tr>
                     </div>
                   <% end %>

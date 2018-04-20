@@ -28,7 +28,6 @@
 #
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
-
 en:
   simple_form:
     labels:
@@ -36,3 +35,6 @@ en:
         c_name: 'Course Name'
         term: 'Learning time'
         price: 'Tuition fee'
+      user:
+        u_name: 'User Name'
+        age: 'Age'

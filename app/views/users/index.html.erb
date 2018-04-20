@@ -1,0 +1,32 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-6 col-md-4 col-md-offset-4">
+      <div class="thumbnail">
+        <div class="caption regist">
+          <table class="table">
+              <thead>
+                  <tr>
+                      <th>id</th>
+                      <th>User Name</th>
+                      <th>Age</th>
+                      <th></th>
+                      <th></th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <% @users.each do |data| %>
+                      <tr>
+                        <th><%= data.id %></th>
+                        <td><%= data.u_name %></td>
+                        <td><%= data.age %></td>
+                        <td><%= link_to 'edit', edit_user_path(data) %></td>
+                        <td><%= link_to 'delete', user_path(data) , method:'delete' %></td>
+                      </tr>
+                  <% end %>
+              </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
