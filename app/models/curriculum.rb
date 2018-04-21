@@ -1,4 +1,6 @@
 class Curriculum < ApplicationRecord
+  has_many :users_curriculums
+
   validates :c_name, presence: true
   validates :term, presence: true
   validates :price, presence: true

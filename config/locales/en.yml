@@ -38,3 +38,6 @@ en:
       user:
         u_name: 'User Name'
         age: 'Age'
+      users_curriculum:
+        user_id: 'User ID'
+        curriculum_id: 'Curriculum ID'

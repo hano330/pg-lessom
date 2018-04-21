@@ -9,6 +9,7 @@
                       <th>id</th>
                       <th>User Name</th>
                       <th>Age</th>
+                      <th>Curriculum</th>
                       <th></th>
                       <th></th>
                   </tr>
@@ -19,6 +20,7 @@
                         <th><%= data.id %></th>
                         <td><%= data.u_name %></td>
                         <td><%= data.age %></td>
+                        <td><%= link_to 'add', "/users/#{data.id}/users_curriculums/new" %></td>
                         <td><%= link_to 'edit', edit_user_path(data) %></td>
                         <td><%= link_to 'delete', user_path(data) , method:'delete' %></td>
                       </tr>

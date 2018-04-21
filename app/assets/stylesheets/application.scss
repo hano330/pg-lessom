@@ -20,6 +20,7 @@
 
 body {
   height: 1000px;
+  padding-top: 100px;
 }
 
 .form{
@@ -31,7 +32,12 @@ body {
   }
 }
 
+
 @media only screen and (max-width: 767px) {
+  body {
+    padding-top: 60px;
+  }
+
 	.forms{
     font-size: 10px;
     padding: 20px;
