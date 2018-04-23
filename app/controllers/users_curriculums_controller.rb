@@ -1,6 +1,7 @@
 class UsersCurriculumsController < ApplicationController
   def index
-    @users_curriculum = UsersCurriculum.where(user_id: params[:user_id])
+    u_curriculum = UsersCurriculum.new
+    @selected_curriculums = u_curriculum.users_curriculum(params[:user_id])
     @user = User.find(params[:user_id])
   end
   def new
@@ -24,6 +25,8 @@ class UsersCurriculumsController < ApplicationController
   end
   def destroy
     #code
+    u_curriculum = UsersCurriculum.find(params[:id])
+    u_curriculum.destroy
   end
 
   private

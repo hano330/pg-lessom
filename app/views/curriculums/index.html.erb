@@ -11,7 +11,6 @@
                       <th>Term</th>
                       <th>Price</th>
                       <th></th>
-                      <th></th>
                   </tr>
               </thead>
               <tbody>
@@ -23,7 +22,6 @@
                         <td><%= data.term %></td>
                         <td><%= data.price %></td>
                         <td><%= link_to 'edit', edit_curriculum_path(data) %></td>
-                        <td><%= link_to 'delete', curriculum_path(data), method:'delete' %></td>
                       </tr>
                     </div>
                   <% end %>

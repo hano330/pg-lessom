@@ -9,6 +9,11 @@ class UsersController < ApplicationController
   end
   def show
     #code
+    #中間テーブルから値を取得
+    @user = User.find(params[:id])
+    @selected_curriculums = @user.users_curriculums.includes(:curriculum)
+    #deleteのためのuser id を受け渡す
+    @user_id = params[:id]
   end
   def create
     #code

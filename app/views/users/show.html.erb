@@ -1,2 +1,33 @@
-
-<li><%= link_to "Users curriculum", user_users_curriculums_path %></li>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-6 col-md-4 col-md-offset-4">
+      <div class="thumbnail">
+        <div class="caption regist">
+          <table class="table">
+              <h3 class="text-center"><%= @user.u_name %></h3>
+              <thead>
+                  <tr>
+                      <th>Selected Curriculums</th>
+                      <th>Price</th>
+                      <th></th>
+                      <th></th>
+                  </tr>
+              </thead>
+              <tbody>
+                <% @selected_curriculums.each do |data| %>
+                  <div class="edit-form">
+                    <tr>
+                      <td><%= data.curriculum.c_name %></td>
+                      <td><%= data.curriculum.price %></td>
+                      <td><%= link_to 'edit' %></td>
+                      <td><%= link_to 'delete', "/users/#{@user_id}/users_curriculums/#{data.id}" , method:'delete'  %></td>
+                    </tr>
+                  </div>
+                <% end %>
+              </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
