@@ -10,16 +10,17 @@
                       <th>Curriculums Name</th>
                       <th></th>
                       <th></th>
+                      <th></th>
                   </tr>
               </thead>
               <tbody>
                   <% @selected_curriculums.each do |data| %>
                     <div class="edit-form">
                       <tr>
-                        <td><%= data.c_name %></td>
-                        <td><%= data.price %></td>
-                        <td><%= link_to 'edit', "/users/#{@user.id}/users_curriculums/#{data.id}/edit" %></td>
-                        <td><%= link_to 'delete', "/users/#{@user.id}/users_curriculums/#{data.id}", method:'delete' %></td>
+                        <td><%= data.curriculum.c_name %></td>
+                        <td><%= data.curriculum.price %></td>
+                        <td><%= link_to 'edit', "/users/#{data.user_id}/users_curriculums/#{data.id}/edit" %></td>
+                        <td><%= link_to 'delete', "/users/#{data.user_id}/users_curriculums/#{data.id}", method:'delete' %></td>
                       </tr>
                     </div>
                   <% end %>

@@ -14,4 +14,7 @@ class Curriculum < ApplicationRecord
       all
     end
   end
+
+
+
 end

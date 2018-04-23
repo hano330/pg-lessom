@@ -7,14 +7,31 @@
           <table class="table">
               <thead>
                   <tr>
-                      <th>id</th>
-                      <th>Curriculum Name</th>
-                      <th>Term</th>
-                      <th>Price</th>
+                    <% if @curriculuns %>
+                      <% @curriculuns.each do |data| %>
+                        <div class="edit-form">
+                          <th>id</th>
+                          <th>Curriculum Name</th>
+                          <th>Term</th>
+                          <th>Price</th>
+                          <th></th>
+                          <th></th>
+                        </div>
+                      <% end %>
+                    <% elsif @users %>
+                        <div class="edit-form">
+                          <th>id</th>
+                          <th>User Name</th>
+                          <th>Age</th>
+                          <th></th>
+                          <th></th>
+                        </div>
+                    <% end %>
                   </tr>
               </thead>
               <tbody>
-                  <% @curriculun.each do |data| %>
+                <% if @curriculuns %>
+                  <% @curriculuns.each do |data| %>
                     <div class="edit-form">
                       <tr>
                         <th><%= data.id %></th>
@@ -26,6 +43,19 @@
                       </tr>
                     </div>
                   <% end %>
+                <% elsif @users %>
+                  <% @users.each do |data| %>
+                    <div class="edit-form">
+                      <tr>
+                        <th><%= data.id %></th>
+                        <td><%= data.u_name %></td>
+                        <td><%= data.age %></td>
+                        <td><%= link_to 'edit', edit_curriculum_path(data) %></td>
+                        <td><%= link_to 'delete', curriculum_path(data) , method:'delete' %></td>
+                      </tr>
+                    </div>
+                  <% end %>
+                <% end %>
               </tbody>
           </table>
         </div>
