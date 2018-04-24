@@ -15,6 +15,4 @@ class Curriculum < ApplicationRecord
     end
   end
 
-
-
 end
