@@ -14,6 +14,7 @@ class UsersController < ApplicationController
     @selected_curriculums = @user.users_curriculums.includes(:curriculum)
     #deleteのためのuser id を受け渡す
     @user_id = params[:id]
+    @per = "30"
   end
   def create
     #code
@@ -22,11 +23,19 @@ class UsersController < ApplicationController
   def edit
     #code
     @user = User.find(params[:id])
+    @selected_curriculums = UsersCurriculum.where(user_id: params[:id])
+    #deleteのためのuser id を受け渡す
+    @user_id = params[:id]
   end
   def update
     #code
     user = User.find(params[:id])
-    user.update(user_params)
+    if user
+      user.update(user_params)
+    elsif param[:c_id]
+
+    else
+    end
   end
   def destroy
     #code

@@ -12,6 +12,7 @@ class UsersCurriculumsController < ApplicationController
   end
   def show
     #code
+
   end
   def create
     #code
@@ -19,9 +20,13 @@ class UsersCurriculumsController < ApplicationController
   end
   def edit
     #code
+    @selected_curriculums = UsersCurriculum.find(params[:id])
+    @user = User.find(params[:user_id])
   end
   def update
     #code
+    curriculum = UsersCurriculum.find(params[:id])
+    curriculum.update(skill_params)
   end
   def destroy
     #code
@@ -34,5 +39,9 @@ class UsersCurriculumsController < ApplicationController
   def users_curriculums_params
     #code
     params.require(:users_curriculum).permit(:user_id, :curriculum_id)
+  end
+  def skill_params
+    #code
+    params.permit(:user_id, :skill)
   end
 end
